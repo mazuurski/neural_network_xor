@@ -176,10 +176,10 @@ class NeuralNetwork:
             f.write("HISTORIA TRENINGU:\n\n")
             f.write(f"{'Epoka':<10} {'Błąd':<20}\n")
 
-            # pierwsze 10, ostatnie 10 i co setną epokę
             history = self.training_history
-            epochs_to_show = set(range(min(10, len(history))))
-            epochs_to_show.update(range(max(0, len(history) - 10), len(history)))
+            # pierwsze 20, ostatnie 20 i co setną epokę
+            epochs_to_show = set(range(min(20, len(history))))
+            epochs_to_show.update(range(max(0, len(history) - 20), len(history)))
             epochs_to_show.update(range(0, len(history), 100))
 
             for idx in sorted(epochs_to_show):

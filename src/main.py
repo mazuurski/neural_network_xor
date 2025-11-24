@@ -13,8 +13,8 @@ def main():
 
     data_dir.mkdir(exist_ok=True)
 
-    x_train, d_train = generate_xor_dataset(n_samples=210)
-    x_test, d_test = generate_xor_dataset(n_samples=90, random_seed=321)
+    x_train, d_train = generate_xor_dataset(n_samples=208)
+    x_test, d_test = generate_xor_dataset(n_samples=88, random_seed=321)
 
     save_dataset(x_train, d_train, str(data_dir / 'train_set.json'))
     save_dataset(x_test, d_test, str(data_dir / 'test_set.json'))
@@ -25,8 +25,8 @@ def main():
             'hidden_size': 2,
             'output_size': 1,
             'learning_rate': 0.01,
-            'beta': 1.0,
-            'epochs': 965,
+            'beta': 2.0,
+            'epochs': 125,
         }
         with open(config_path, 'w') as f:
             json.dump(default_config, f, indent=2)

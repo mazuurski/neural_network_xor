@@ -3,6 +3,6 @@
   "hidden_size": 2,
   "output_size": 1,
   "learning_rate": 0.01,
-  "beta": 1.0,
-  "epochs": 965
+  "beta": 2.0,
+  "epochs": 125
 }
